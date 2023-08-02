@@ -17,6 +17,8 @@ body {
 
 .container {
   display: flex;
+  flex-wrap: wrap; /* Allow panels to wrap to the next line on small screens */
+  justify-content: center; /* Center the panels horizontally */
   width: 90vw;
 }
 
@@ -53,19 +55,13 @@ body {
   transition: opacity 0.3s ease-in 0.4s;
 }
 
-@media (max-width: 768px) { /* Adjust the breakpoint to your preference */
+@media (max-width: 768px) {
   .container {
-    flex-wrap: wrap;
-    height: auto;
+    width: 100vw;
   }
 
   .panel {
     flex: 1;
     height: 50vh;
-  }
-
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
   }
 }
